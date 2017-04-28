@@ -2,7 +2,7 @@
 title: RG
 description: RG
  baseurl: "/RG" # the subpath of your site, e.g. /blog
- url: "https://RG32092.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+ url: "https://RG32092.github.io/RG" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: RG
