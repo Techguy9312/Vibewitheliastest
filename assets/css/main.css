@@ -116,3 +116,11 @@ li a:hover {
     background-color: #111;
 }
 
+.person img{
+  width:130px;
+  height:130px;
+  border-radius:100%;
+  margin-bottom:80px
+
+}
+
