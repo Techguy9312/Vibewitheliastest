@@ -15,5 +15,44 @@
 <div class="player" style="background-image: url(&quot;https://i1.sndcdn.com/artworks-000261942074-6610bc-t500x500.jpg&quot;);">
     <span class="info">Back Now (Prod. Knowledge)</span>
     <div class="waveform" style="background-image: url(&quot;https://w1.sndcdn.com/XM6A4PFEunO8_m.png&quot;);"></div>
-    <div class="position" style="width: 94%;height: 94%;"></div>
+    <div class="position" style="width: 94%;"></div>
 </div>
+  
+  <style>
+    element.style {
+    background-image: url(https://w1.sndcdn.com/XM6A4PFEunO8_m.png);
+}
+index.html:28
+.waveform {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: 100% 100%;
+    -webkit-transition: background-image 1s linear;
+    transition: background-image 1s linear;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from div.player
+index.html:12
+.player {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #efefef;
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: background-image 1s linear;
+    transition: background-image 1s linear;
+}
+  </style>
