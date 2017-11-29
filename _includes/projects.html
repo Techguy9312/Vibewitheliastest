@@ -8,16 +8,65 @@
       
       
       
-      <script src='//w.soundcloud.com/player/api.js'></script>
+   <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/3.1.0/plangular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="bower_components/plangular/dist/plangular.min.js"></script>
+      <body ng-app="app">
+
+  <script>
+    var app = angular.module('app', ['plangular'])
+      .config(function(plangularConfigProvider){
+        plangularConfigProvider.clientId = '[YOUR-CLIENT-ID]';
+      });
+  </script>
+</body>
       
-<div class="player">
-  <span class='info'></span>
-  <div class="waveform"></div>
-  <div class="position"></div>  
+      <div plangular="http://soundcloud.com/jxnblk/plangular">
 </div>
 
-<iframe width="100%" height="300" class="sc-widget" src="https://github.com/Techguy9312/Vibewitheliastest/blob/master/assets/js/player.js">
-      </iframe>
+      <div plangular="http://soundcloud.com/jxnblk/plangular">
+  <h3>{{track.user.username}} - {{track.title}}</h3>
+  <a ng-href="{{track.permalink_url}}">View on SoundCloud</a>
+</div>
+      
+      <button ng-click="playPause()">Play/Pause</button>
+      
+      <small>{{ currentTime | hhmmss }} | {{ duration | hhmmss }}</small>
+      
+      <progress ng-value="currentTime / duration || 0">
+  {{ currentTime / duration || 0 }}
+</progress>
+      
+      <progress
+  ng-click="seek($event)"
+  ng-value="currentTime / duration">
+  {{ currentTime / duration }}
+</progress>
+      
+      <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
+<img ng-src="{{ track.waveform_url }}" alt="waveform" />
+      
+      <div ng-if="!track"><!-- Loading state --></div>
+<div ng-if="track"><!-- Player --></div>
+      
+      <ul>
+  <li ng-repeat="track in tracks">
+    <button
+      ng-click="playPause($index)"
+      ng-class="{'active': player.playing === track.src}">
+      {{track.user.username}} - {{track.title}}
+    </button>
+  </li>
+</ul>
+      
+      <div plangular="http://soundcloud.com/jxnblk/tracks">
+</div>
+      
+      <div plangular="http://soundcloud.com/jxnblk/likes">
+</div>
+      
+      <button ng-click="previous()">Previous</button>
+<button ng-click="next()">Next</button>
       
       
       
