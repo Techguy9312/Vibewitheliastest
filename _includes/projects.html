@@ -1,52 +1,30 @@
 <body>
 
-<div class="container">
-  <div class="user-details">
-    <h3>Music</h3>
-  </div>
-  <div>
-    
-    <center>
-      
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/361684544&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>      
-      
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/358676657&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe> 
-      
-      
-      <script>
-    (function() {
-        var script = document.createElement("script");
+<div id="player"></div>
 
-        script.type = "text/javascript";
-        script.async = true;
-        script.src = "//sd.toneden.io/production/v2/toneden.loader.js";
-
-        var entry = document.getElementsByTagName("script")[0];
-        entry.parentNode.insertBefore(script, entry);
-    }());
-
-    ToneDenReady = window.ToneDenReady || [];
-    ToneDenReady.push(function() {
-        // Modify the dom and urls parameters to position
-        // your player and select tracks/sets/artists to play.
-        ToneDen.player.create({
-            dom: "#player",
-            urls: [
-                "https://soundcloud.com/giraffage"
-            ]
-        });
-    });
+  <script>
+   (function() {
+      var script = document.createElement('script');
+ 
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'http://sd.toneden.io/production/toneden.loader.js'
+ 
+      var entry = document.getElementsByTagName('script')[0];
+      entry.parentNode.insertBefore(script, entry);
+   }());
+ 
+   ToneDenReady = window.ToneDenReady || [];
+   ToneDenReady.push(function() {
+      // This is where all the action happens:
+      ToneDen.player.create({
+         dom: '#player',
+         urls: [
+            'https://soundcloud.com/vibewithelias'
+         ]
+      });
+   });
 </script>
-            
-
-
-      
-    </center>  
-    
-    </body>
-    
-
-    <style>
-   
-      
-    </style>
+  
+  
+</body>
